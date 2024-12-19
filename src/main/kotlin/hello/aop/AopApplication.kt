@@ -7,7 +7,8 @@ import org.springframework.context.annotation.Import
 
 @SpringBootApplication
 //@Import(AspectV4Pointcut::class)
-@Import(AspectV5Order.LogAspect::class,AspectV5Order.TxAspect::class)
+//@Import(AspectV5Order.LogAspect::class,AspectV5Order.TxAspect::class)
+@Import(AspectV6Advice::class)
 class AopApplication
 
 fun main(args: Array<String>) {
