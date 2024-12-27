@@ -58,7 +58,7 @@ class AtTargetAtWithinTest(
             return joinPoint.proceed()
         }
 
-        //        @within: 선택된 클래스 내부에 있는 메서드만 조인 포인트로 선정, 부모 타입의 메서드는 적용되지 않음
+        // @within: 선택된 클래스 내부에 있는 메서드만 조인 포인트로 선정, 부모 타입의 메서드는 적용되지 않음
         @Around("execution(* hello.aop..*(..)) && @within(hello.aop.member.annotation.ClassAop)")
         fun atWithin(joinPoint: ProceedingJoinPoint): Any? {
             log.info("[@within] ${joinPoint.signature}")
