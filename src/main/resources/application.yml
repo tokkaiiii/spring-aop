@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: aop
+  aop:
+    proxy-target-class: true
+# true ? CGLIB
+# false ? ??
